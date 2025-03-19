@@ -44,12 +44,13 @@
 }
 
 .btn-primary {
-    background-color: #3b82f6;
+    background-color: #2563eb;
     color: white;
 }
 
-.btn-primary:hover {
-    background-color: #2563eb;
+.btn:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0px #000000;
 }
 
 .btn-flag {
@@ -59,10 +60,6 @@
 
 .btn-flag.active {
     background-color: #ef4444;
-}
-
-.btn-flag:hover {
-    opacity: 0.75;
 }
 
 .flag-counter {
