@@ -10,7 +10,7 @@
                         {{ $flagMode ? 'Flag Mode (On)' : 'Flag Mode (Off)' }}
                     </button>
                     <div class="flag-counter">
-                        Flags: {{ $flaggedCells }} / {{ $mines }}
+                        🚩 {{ $flaggedCells }} / {{ $mines }}
                     </div>
                 </div>
 
