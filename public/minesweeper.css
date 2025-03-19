@@ -85,29 +85,33 @@
 
 .game-grid {
     display: grid;
-    gap: 0.25rem;
+    gap: 10px;
     background-color: #e5e7eb;
     padding: 0.5rem;
     border-radius: 0.25rem;
 }
 
 .cell {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.875rem;
     font-weight: bold;
     cursor: pointer;
+    border-radius: 5px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0px #000000;
 }
 
 .cell-unrevealed {
-    background-color: #d1d5db;
+    background-color: #356854;
 }
 
 .cell-unrevealed:hover {
-    background-color: #9ca3af;
+    transform: translate(-4px, -4px);
+    box-shadow: 8px 8px 0px #000000;
 }
 
 .cell-revealed {
