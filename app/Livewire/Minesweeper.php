@@ -21,6 +21,8 @@ class Minesweeper extends Component
         $this->initializeBoard();
     }
 
+    public $firstClick = true;
+
     public function initializeBoard()
     {
         $this->board = [];
@@ -28,6 +30,7 @@ class Minesweeper extends Component
         $this->gameWon = false;
         $this->flaggedCells = 0;
         $this->revealedCells = 0;
+        $this->firstClick = true;
 
         // Initialize empty board
         for ($i = 0; $i < $this->rows; $i++) {
@@ -40,12 +43,19 @@ class Minesweeper extends Component
                 ];
             }
         }
+    }
 
-        // Place mines randomly
+    public function placeMines($excludeRow, $excludeCol)
+    {
         $minesPlaced = 0;
         while ($minesPlaced < $this->mines) {
             $row = rand(0, $this->rows - 1);
             $col = rand(0, $this->cols - 1);
+
+            // Skip if the cell is within the safe zone around the first click
+            if (abs($row - $excludeRow) <= 1 && abs($col - $excludeCol) <= 1) {
+                continue;
+            }
 
             if (!$this->board[$row][$col]['hasMine']) {
                 $this->board[$row][$col]['hasMine'] = true;
@@ -76,10 +86,15 @@ class Minesweeper extends Component
 
         if ($this->flagMode) {
             $this->toggleFlag($row, $col);
-        } else {
-            $this->revealCell($row, $col);
+            return;
         }
 
+        if ($this->firstClick) {
+            $this->firstClick = false;
+            $this->placeMines($row, $col);
+        }
+
+        $this->revealCell($row, $col);
         $this->checkWinCondition();
     }
 
