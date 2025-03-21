@@ -1,4 +1,22 @@
-@import 'tailwindcss';
+/* Base styles */
+.app-body {
+    background-color: #FDFDFC;
+    color: #1b1b18;
+}
+
+.main-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    .app-body {
+        background-color: #0a0a0a;
+        color: #EDEDEC;
+    }
+}
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';

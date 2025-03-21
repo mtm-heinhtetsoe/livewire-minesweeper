@@ -1,0 +1,48 @@
+.nav-container {
+    width: 100%;
+    background-color: #FDFDFC;
+    border-bottom: 1px solid rgba(25, 20, 0, 0.21);
+    padding: 1rem;
+}
+
+.nav-content {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand {
+    color: #1b1b18;
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: #1b1b18;
+    text-decoration: none;
+    transition: opacity 0.3s;
+}
+
+.nav-link:hover {
+    opacity: 0.75;
+}
+
+/* Dark theme styles */
+@media (prefers-color-scheme: dark) {
+    .nav-container {
+        background-color: #0a0a0a;
+        border-bottom-color: #3E3E3A;
+    }
+
+    .nav-brand,
+    .nav-link {
+        color: #EDEDEC;
+    }
+}
