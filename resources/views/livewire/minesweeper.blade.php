@@ -21,7 +21,8 @@
                 @if($gameWon)
                     <div class="game-status game-won">You Won!</div>
                 @endif
-
+            </div>
+            <div class="minesweeper-content">
                 <div class="game-grid" style="grid-template-columns: repeat({{ $cols }}, minmax(0, 1fr));">
                     @foreach($board as $rowIndex => $row)
                         @foreach($row as $colIndex => $cell)
