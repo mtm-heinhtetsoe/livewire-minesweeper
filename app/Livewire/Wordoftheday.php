@@ -43,7 +43,7 @@ class Wordoftheday extends Component
             $this->submitGuess();
         } elseif ($key === '⌫') {
             $this->backspace();
-        } elseif (strlen($this->currentGuess) < 6) {
+        } elseif (strlen($this->currentGuess) < $this->answer_length) {
             $this->currentGuess .= $key;
         }
     }
