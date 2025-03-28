@@ -1,4 +1,5 @@
 <div class="word-game-container">
+    <link rel="stylesheet" type="text/css" href="{{ asset('wordoftheday.css') }}">
     <h2 class="word-game-title">Word of the Day</h2>
     <div class="word-game-board">
         @if($message)

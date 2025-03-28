@@ -1,4 +1,5 @@
 <div class="minesweeper-container">
+    <link rel="stylesheet" type="text/css" href="{{ asset('minesweeper.css') }}">
     <div class="minesweeper-wrapper">
         <div class="minesweeper-board">
             <div class="minesweeper-content">
