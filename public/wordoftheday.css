@@ -8,19 +8,16 @@
     font-weight: 600;
     margin-bottom: 1.5rem;
     text-align: center;
-    color: #1b1b18;
+    color: orange;
 }
 
 .dark .word-game-title {
-    color: #EDEDEC;
+    color: yellow;
 }
 
 .word-game-board {
     background-color: white;
-    border-radius: 0.5rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
-    border: 1px solid rgba(25, 20, 0, 0.2);
 }
 
 .dark .word-game-board {
@@ -56,7 +53,7 @@
 }
 
 .game-grid {
-    max-width: 14rem;
+    max-width: 18rem;
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -66,28 +63,22 @@
 
 .grid-cell {
     aspect-ratio: 1;
+    color: orange;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
     font-weight: 700;
+    border-radius: 0.25rem;
     border: 2px solid;
 }
 
 .cell-empty {
-    border-color: #e5e7eb;
-}
-
-.dark .cell-empty {
-    border-color: #374151;
+    border-color: orange;
 }
 
 .cell-active {
-    border-color: #9ca3af;
-}
-
-.dark .cell-active {
-    border-color: #4b5563;
+    border-color: orange;
 }
 
 .cell-correct {
@@ -130,8 +121,9 @@
     justify-content: center;
     font-weight: 600;
     border-radius: 0.25rem;
-    background-color: #e5e7eb;
-    color: #1f2937;
+    background-color: #fff;
+    border: 2px solid orange;
+    color: orange;
     transition: opacity 0.2s;
 }
 
@@ -150,19 +142,23 @@
 
 .key-correct {
     background-color: #22c55e;
+    border-color: #22c55e;
     color: white;
 }
 
 .key-present {
     background-color: #eab308;
+    border-color: #eab308;
     color: white;
 }
 
 .key-absent {
     background-color: #6b7280;
+    border-color: #6b7280;
     color: white;
 }
 
 .keyboard-action {
-    padding: 0 1rem;
+    color: #fff;
+    background-color: orange;
 }
