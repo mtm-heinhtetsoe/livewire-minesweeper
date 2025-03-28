@@ -1,6 +1,12 @@
 <div class="word-game-container">
     <link rel="stylesheet" type="text/css" href="{{ asset('wordoftheday.css') }}">
     <h2 class="word-game-title">Word of the Day</h2>
+    @if($answer_length === 0)
+        <div>
+            <input type="text" name="word" id="word" placeholder="word" wire:model="tmp_word">
+            <button wire:click="start()" class="keyboard-key keyboard-action">Start</button>
+        </div>
+    @else
     <div class="word-game-board">
         @if($message)
             <div class="game-message {{ str_contains($message, 'Congratulations') ? 'message-success' : 'message-error' }}">
@@ -69,4 +75,5 @@
             @endforeach
         </div>
     </div>
+    @endif
 </div>

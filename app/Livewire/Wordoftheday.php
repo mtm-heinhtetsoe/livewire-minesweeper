@@ -6,7 +6,8 @@ use Livewire\Component;
 
 class Wordoftheday extends Component
 {
-    public $word = 'ELEPHANT';
+    public $word = '';
+    public $tmp_word = '';
     public $try_count = 6;
     public $guesses = [];
     public $currentGuess = '';
@@ -20,8 +21,13 @@ class Wordoftheday extends Component
     ];
     public $letterStates = [];
 
-    public function mount()
+    public function start()
     {
+        if (empty($this->tmp_word)) {
+            $this->message = 'Please enter a word.';
+            return;
+        }
+        $this->word = strtoupper($this->tmp_word);
         $this->initializeGame();
     }
 

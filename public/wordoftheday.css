@@ -53,7 +53,7 @@
 }
 
 .game-grid {
-    max-width: 18rem;
+    max-width: 22rem;
     margin: 0 auto;
     display: grid;
     gap: 0.5rem;
@@ -61,6 +61,7 @@
 }
 
 .grid-cell {
+    min-width: 2rem;
     aspect-ratio: 1;
     color: orange;
     display: flex;
