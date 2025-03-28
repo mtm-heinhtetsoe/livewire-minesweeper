@@ -1,5 +1,5 @@
 .word-game-container {
-    max-width: 56rem;
+    max-width: 24rem;
     margin: 0 auto;
 }
 
@@ -118,8 +118,8 @@
 }
 
 .keyboard-key {
-    width: 2.5rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,6 +128,10 @@
     background-color: #e5e7eb;
     color: #1f2937;
     transition: opacity 0.2s;
+}
+
+.keyboard-key-enter, .keyboard-key-backspace {
+    width: 3.5rem;
 }
 
 .dark .keyboard-key {

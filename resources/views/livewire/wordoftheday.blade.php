@@ -30,7 +30,7 @@
 
         <!-- Custom Keyboard -->
         <div class="keyboard-container">
-            @foreach ($keyboard as $row)
+            @foreach ($keyboard as $i => $row)
                 <div class="keyboard-row">
                     @foreach ($row as $key)
                         <button 
@@ -48,22 +48,24 @@
                             {{ $key }}
                         </button>
                     @endforeach
+                    @if ($i === 2)
+                        <button 
+                            wire:click="pressKey('⌫')" 
+                            class="keyboard-key keyboard-key-backspace keyboard-action"
+                        >
+                            ⌫
+                        </button>
+                    @endif
+                    @if ($i === 3)
+                        <button 
+                            wire:click="pressKey('Enter')" 
+                            class="keyboard-key keyboard-key-enter keyboard-action"
+                        >
+                            Enter
+                        </button>
+                    @endif
                 </div>
             @endforeach
-            <div class="keyboard-row">
-                <button 
-                    wire:click="pressKey('⌫')" 
-                    class="keyboard-key keyboard-action"
-                >
-                    ⌫
-                </button>
-                <button 
-                    wire:click="pressKey('Enter')" 
-                    class="keyboard-key keyboard-action"
-                >
-                    Enter
-                </button>
-            </div>
         </div>
     </div>
 </div>
