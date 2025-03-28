@@ -51,7 +51,7 @@
                     @if ($i === 1)
                         <button 
                             wire:click="pressKey('⌫')" 
-                            class="keyboard-key keyboard-key-backspace keyboard-action"
+                            class="keyboard-key keyboard-action"
                         >
                             ⌫
                         </button>

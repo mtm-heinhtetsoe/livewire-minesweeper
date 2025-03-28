@@ -1,5 +1,5 @@
 .word-game-container {
-    max-width: 24rem;
+    max-width: 30rem;
     margin: 0 auto;
 }
 
@@ -7,6 +7,7 @@
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
+    text-align: center;
     color: #1b1b18;
 }
 
@@ -55,6 +56,8 @@
 }
 
 .game-grid {
+    max-width: 14rem;
+    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 0.5rem;
@@ -106,9 +109,11 @@
 }
 
 .keyboard-container {
+    max-width: 22.5rem;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     gap: 0.5rem;
 }
 
@@ -130,8 +135,8 @@
     transition: opacity 0.2s;
 }
 
-.keyboard-key-enter, .keyboard-key-backspace {
-    width: 3.5rem;
+.keyboard-key-enter {
+    width: 6.5rem;
 }
 
 .dark .keyboard-key {
