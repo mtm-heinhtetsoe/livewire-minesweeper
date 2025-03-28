@@ -48,7 +48,7 @@
                             {{ $key }}
                         </button>
                     @endforeach
-                    @if ($i === 2)
+                    @if ($i === 1)
                         <button 
                             wire:click="pressKey('⌫')" 
                             class="keyboard-key keyboard-key-backspace keyboard-action"
@@ -56,7 +56,7 @@
                             ⌫
                         </button>
                     @endif
-                    @if ($i === 3)
+                    @if ($i === 2)
                         <button 
                             wire:click="pressKey('Enter')" 
                             class="keyboard-key keyboard-key-enter keyboard-action"
