@@ -10,7 +10,7 @@
 
         <!-- Game Grid -->
         <div class="game-grid">
-            @for ($row = 0; $row < str_len($word); $row++)
+            @for ($row = 0; $row < strlen($word); $row++)
                 @for ($col = 0; $col < $try_count; $col++)
                     <div class="grid-cell {{ 
                         isset($guesses[$row]) 
