@@ -53,8 +53,10 @@ class Wordoftheday extends Component
 
     public function submitGuess()
     {
-        if (strlen($this->currentGuess) !== 6) {
-            $this->message = 'Word must be 6 letters long';
+        $answer_length = strlen($this->word);
+        // Check if the guess is the correct length before proceeding with the validation
+        if (strlen($this->currentGuess) !== $answer_length) {
+            $this->message = "Word must be $answer_length letters long";
             return;
         }
 
@@ -64,7 +66,7 @@ class Wordoftheday extends Component
         if ($this->currentGuess === $this->word) {
             $this->gameOver = true;
             $this->message = 'Congratulations! You won!';
-        } elseif (count($this->guesses) >= 6) {
+        } elseif (count($this->guesses) >= $this->try_count) {
             $this->gameOver = true;
             $this->message = 'Game Over! The word was ' . $this->word;
         }
