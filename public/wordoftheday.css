@@ -15,6 +15,33 @@
     color: yellow;
 }
 
+.word-form {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.word-input {
+    border: 2px solid orange;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.word-button {
+    width: 4rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    border-radius: 0.25rem;
+    background-color: orange;
+    border: 2px solid orange;
+    color: white;
+    transition: opacity 0.2s;
+}
+
 .word-game-board {
     background-color: white;
     padding: 1.5rem;

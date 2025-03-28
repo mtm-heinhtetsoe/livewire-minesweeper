@@ -2,9 +2,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('wordoftheday.css') }}">
     <h2 class="word-game-title">Word of the Day</h2>
     @if($answer_length === 0)
-        <div>
-            <input type="text" name="word" id="word" placeholder="word" wire:model="tmp_word">
-            <button wire:click="start()" class="keyboard-key keyboard-action">Start</button>
+        <div class="word-form">
+            <input type="text" class="word-input" name="word" id="word" placeholder="word" wire:model="tmp_word">
+            <button wire:click="start()" class="word-button keyboard-action">Start</button>
         </div>
     @else
     <div class="word-game-board">
