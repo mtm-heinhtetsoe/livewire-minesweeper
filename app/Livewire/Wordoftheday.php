@@ -6,7 +6,8 @@ use Livewire\Component;
 
 class Wordoftheday extends Component
 {
-    public $word = 'CRYPTO';
+    public $word = 'ELEPHANT';
+    public $try_count = 6;
     public $guesses = [];
     public $currentGuess = '';
     public $gameOver = false;

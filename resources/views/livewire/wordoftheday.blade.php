@@ -10,8 +10,8 @@
 
         <!-- Game Grid -->
         <div class="game-grid">
-            @for ($row = 0; $row < 6; $row++)
-                @for ($col = 0; $col < 6; $col++)
+            @for ($row = 0; $row < str_len($word); $row++)
+                @for ($col = 0; $col < $try_count; $col++)
                     <div class="grid-cell {{ 
                         isset($guesses[$row]) 
                             ? (getLetterClass(substr($guesses[$row], $col, 1), $col, $guesses[$row], $word, $letterStates) === 'correct' 
