@@ -92,21 +92,6 @@ class Wordoftheday extends Component
         }
     }
 
-    public function getLetterClass($letter, $position = null, $guess = null)
-    {
-        if ($guess === null) {
-            return isset($this->letterStates[$letter]) ? $this->letterStates[$letter] : '';
-        }
-
-        $word = str_split($this->word);
-        if ($letter === $word[$position]) {
-            return 'correct';
-        } elseif (in_array($letter, $word)) {
-            return 'present';
-        }
-        return 'absent';
-    }
-
     public function render()
     {
         return view('livewire.wordoftheday');

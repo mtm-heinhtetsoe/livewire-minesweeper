@@ -13,9 +13,9 @@
                 @for ($col = 0; $col < 6; $col++)
                     <div class="grid-cell {{ 
                         isset($guesses[$row]) 
-                            ? (getLetterClass(substr($guesses[$row], $col, 1), $col, $guesses[$row]) === 'correct' 
+                            ? (getLetterClass(substr($guesses[$row], $col, 1), $col, $guesses[$row], $word, $letterStates) === 'correct' 
                                 ? 'cell-correct' 
-                                : (getLetterClass(substr($guesses[$row], $col, 1), $col, $guesses[$row]) === 'present' 
+                                : (getLetterClass(substr($guesses[$row], $col, 1), $col, $guesses[$row], $word, $letterStates) === 'present' 
                                     ? 'cell-present'
                                     : 'cell-absent'))
                             : ($row === count($guesses) && strlen($currentGuess) > $col 
