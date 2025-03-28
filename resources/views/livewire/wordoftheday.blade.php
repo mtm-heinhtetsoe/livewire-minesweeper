@@ -9,7 +9,7 @@
         @endif
 
         <!-- Game Grid -->
-        <div class="game-grid">
+        <div class="game-grid" style="grid-template-columns: repeat({{ $answer_length }}, 1fr);">
             @for ($row = 0; $row < $try_count; $row++)
                 @for ($col = 0; $col < strlen($word); $col++)
                     <div class="grid-cell {{ 

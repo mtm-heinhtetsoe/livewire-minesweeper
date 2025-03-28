@@ -12,6 +12,7 @@ class Wordoftheday extends Component
     public $currentGuess = '';
     public $gameOver = false;
     public $message = '';
+    public $answer_length = 0;
     public $keyboard = [
         ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'],
         ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'],
@@ -31,6 +32,7 @@ class Wordoftheday extends Component
         $this->gameOver = false;
         $this->message = '';
         $this->letterStates = [];
+        $this->answer_length = strlen($this->word);
     }
 
     public function pressKey($key)
@@ -53,10 +55,9 @@ class Wordoftheday extends Component
 
     public function submitGuess()
     {
-        $answer_length = strlen($this->word);
         // Check if the guess is the correct length before proceeding with the validation
-        if (strlen($this->currentGuess) !== $answer_length) {
-            $this->message = "Word must be $answer_length letters long";
+        if (strlen($this->currentGuess) !== $this->answer_length) {
+            $this->message = "Word must be $this->answer_length letters long";
             return;
         }
 
